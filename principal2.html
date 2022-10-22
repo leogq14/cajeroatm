@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Pricipal</title>
+</head>
+<body>
+  <FONT color="navy"> <h1>Bienvenido A Tu Banco Online Mariano Galvez</h1> </Font>
+    <FONT color="gray"><h2>Ader Maldonado</h2> </FONT>/
+    <Font color="navy"><label for="">Cuenta Quetzales Saldo:</label> </Font>
+    <input type="text" name="Cantidad1" id="C1" value="10000">
+    <font color="navy"> <label for="">Cuenta Dolares Saldo:</label> </font>
+    <input type="text" name="Cantidad2" id="C2" value="1500">
+    <form action="">
+      <font color="red"> <h2>Transferencias</h2> </font>
+        <input type="text" name="" id="Cant" placeholder="cantidad">
+        <hr>
+        <input type="button" value="Transferencias de Cuenta Quetzales a Dolares" id="bt2" onclick="Formula()">
+        <input type="button" value="Transferencias de cuenta Dolares a Quetzales" id="bt3" onclick="Formula2()">
+        <input type="button" value="Depositar a cuenta Quetzales" id="bt4" onclick="Formula3()">
+        <input type="button" value="Depositar a cuenta Dolares" id="bt5" onclick="Formula4()">
+        <input type="button" value="Retirar de Cuenta Quetzales" id="bt6" onclick="Formula5()">
+        <input type="button" value="Retirar de cuenta Dolares" id="bt7" onclick="Formula6()">
+    </form>
+    <script>
+          function Formula() {
+            var CantidadT=parseInt(document.getElementById('Cant').value);
+            var Cantidad1=parseInt(document.getElementById('C1').value);
+            var Cantidad2=parseInt(document.getElementById('C2').value);
+            document.getElementById('C1').value=(Cantidad1-CantidadT);
+            document.getElementById('C2').value=(Cantidad2+CantidadT);
+          }
+          function Formula2() {
+            var CantidadT=parseInt(document.getElementById('Cant').value);
+            var Cantidad1=parseInt(document.getElementById('C1').value);
+            var Cantidad2=parseInt(document.getElementById('C2').value);
+            document.getElementById('C1').value=(Cantidad1+CantidadT);
+            document.getElementById('C2').value=(Cantidad2-CantidadT);
+          }
+          function Formula3() {
+            var CantidadT=parseInt(document.getElementById('Cant').value);
+            var Cantidad1=parseInt(document.getElementById('C1').value);
+            var Cantidad2=parseInt(document.getElementById('C2').value);
+            document.getElementById('C1').value=(Cantidad1+CantidadT);
+            
+          }
+          function Formula4() {
+            var CantidadT=parseInt(document.getElementById('Cant').value);
+            var Cantidad1=parseInt(document.getElementById('C1').value);
+            var Cantidad2=parseInt(document.getElementById('C2').value);
+            document.getElementById('C2').value=(Cantidad2+CantidadT);
+          }
+          function Formula5() {
+            var CantidadT=parseInt(document.getElementById('Cant').value);
+            var Cantidad1=parseInt(document.getElementById('C1').value);
+            var Cantidad2=parseInt(document.getElementById('C2').value);
+            document.getElementById('C1').value=(Cantidad1-CantidadT);
+
+          }
+          function Formula6() {
+            var CantidadT=parseInt(document.getElementById('Cant').value);
+            var Cantidad1=parseInt(document.getElementById('C1').value);
+            var Cantidad2=parseInt(document.getElementById('C2').value);
+            document.getElementById('C2').value=(Cantidad2-CantidadT);
+          }
+    </script>
+</body>
+</html>

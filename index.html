@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM</title>
+</head>
+
+<body>
+    <body>
+      <br>
+       <FONT color="navy"> <h1>Ingresa Tus Datos </h1> </FONT>
+        <br>
+        <form name="login"> 
+             <table width="200" border="0"> 
+               <tr> 
+                <FONT color="navy">
+                  <th scope="row"><h2>Usuario</h2></th></FONT> 
+                 <td><span class="cnt"> 
+                   <input name="usuario" type="text" class="Input" value="" size="20" /> 
+                 </span></td> 
+               </tr> 
+               <tr> 
+                <FONT color="navy">
+                 <th height="33" scope="row"><h2>Clave</h2></th></FONT>
+                 <td><span class="cnt"> 
+                   <input name="password" type="password" class="Input" value="" size="20" /> 
+                 </span></td> 
+                 <td><span class="cnt"> 
+                   <input value="Entrar" target="_parent" onclick="Login()" type="button" class="boton"/> 
+                 </span></td> 
+               </tr> 
+               <tr> 
+                 <th scope="row"><input type="reset" name="Borrar" id="Borrar" value="Reset" class="boton" /></th> 
+               </tr> 
+             </table> 
+        </form> 
+        
+        <script language="JavaScript"> 
+        function Login(){ 
+        var done=0; 
+        var usuario=document.login.usuario.value; 
+        var password=document.login.password.value; 
+        if (usuario=="0909-22-2340" && password=="2022") { 
+        window.location="principal.html"; 
+        } 
+        if (usuario=="0909-22-8544" && password=="2022") { 
+        window.location="principal2.html"; 
+        } 
+        if (usuario=="" && password=="") { 
+        window.location="errorpopup.html"; 
+        } 
+        } 
+
+        </script>
+</body>
+</html>
